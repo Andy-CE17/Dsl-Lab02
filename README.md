@@ -4,21 +4,33 @@
 **Carrera:** Diseño y Desarrollo de Software  
 **Institución:** Tecsup  
 **Ciclo:** 5.º ciclo  
-**Curso:** Desarrollo de Soluciones en la Nube
+**Curso:** Desarrollo de Soluciones en la Nube  
 
 ## Descripción
 
-Este laboratorio consiste en desarrollar y preparar para despliegue una aplicación web con un perfil personal y un CRUD de usuarios conectado a una base de datos MySQL. El proyecto utiliza Node.js, Express y EJS para renderizar la interfaz, además de HTML, CSS y JavaScript para la experiencia visual e interacción del usuario.
+En este laboratorio desarrollé una aplicación web que muestra mi perfil personal y también cuenta con un CRUD de usuarios conectado a una base de datos MySQL.
+
+Para el desarrollo utilicé Node.js, Express y EJS. La parte visual de la página fue realizada con HTML, CSS y JavaScript.
+
+También trabajé con una base de datos MySQL en la nube utilizando Aiven y finalmente desplegué la aplicación en Render. Para mantener segura la información de conexión utilicé variables de entorno, evitando colocar contraseñas directamente en el código.
+
+## Aplicación desplegada
+
+La aplicación se encuentra desplegada en Render y se puede acceder desde el siguiente enlace:
+
+https://dsl-lab02.onrender.com
 
 ## Objetivos
 
-El proyecto permite:
+Con este laboratorio busqué:
 
-- Mostrar un perfil personal mediante una aplicación web.
+- Crear una aplicación web con un perfil personal.
 - Implementar un CRUD de usuarios.
-- Conectar Node.js con MySQL mediante variables de entorno.
-- Preparar la aplicación para su despliegue en Render.
-- Documentar el procedimiento realizado.
+- Conectar una aplicación Node.js con MySQL.
+- Utilizar una base de datos MySQL alojada en la nube.
+- Manejar las credenciales mediante variables de entorno.
+- Subir el proyecto a GitHub.
+- Desplegar la aplicación utilizando Render.
 
 ## Tecnologías utilizadas
 
@@ -30,6 +42,7 @@ El proyecto permite:
 - EJS
 - MySQL
 - MySQL Workbench
+- Aiven
 - Git
 - GitHub
 - Render
@@ -38,6 +51,7 @@ El proyecto permite:
 
 ```text
 perfil-crud-render/
+
 ├── public/
 │   ├── css/
 │   │   └── style.css
@@ -56,36 +70,26 @@ perfil-crud-render/
 └── README.md
 ```
 
-> Nota: la carpeta `node_modules/`, el archivo `.env` y la carpeta local `.github/modernize/` no deben subirse al repositorio.
+La carpeta `node_modules/` y el archivo `.env` no se suben al repositorio, ya que contienen dependencias locales e información de configuración que no debe publicarse.
 
 ## Base de datos
 
-Base de datos utilizada:
-
-```text
-bd_usuarios
-```
-
-Tabla utilizada:
+Para el CRUD se trabaja con una tabla llamada:
 
 ```text
 usuarios
 ```
 
-Campos:
+Los campos utilizados son:
 
 - `id`
 - `nombre`
 - `correo`
 - `edad`
 
-SQL para crear la base de datos y la tabla:
+La estructura utilizada para la tabla es la siguiente:
 
 ```sql
-CREATE DATABASE bd_usuarios;
-
-USE bd_usuarios;
-
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -94,11 +98,27 @@ CREATE TABLE usuarios (
 );
 ```
 
-No ejecutar comandos destructivos sobre una base de datos existente sin realizar una copia de seguridad previa.
+Esta tabla permite almacenar los usuarios registrados desde la aplicación y realizar las operaciones del CRUD.
 
-## Configuración
+## Base de datos en Aiven
 
-### 1. Clonar repositorio
+Para tener la base de datos disponible desde Internet utilicé Aiven, donde configuré un servicio de MySQL.
+
+Dentro de Aiven utilicé el apartado **Overview**, donde pude revisar la información necesaria para conectar la aplicación con la base de datos.
+
+Entre los datos mostrados se encuentran:
+
+- Host
+- Port
+- User
+- Password
+- Database name
+- SSL mode
+
+
+## Configuración local
+
+### 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/Andy-CE17/Dsl-Lab02.git
@@ -110,15 +130,15 @@ git clone https://github.com/Andy-CE17/Dsl-Lab02.git
 cd Dsl-Lab02
 ```
 
-### 3. Instalar dependencias
+### 3. Instalar las dependencias
 
 ```bash
 npm install
 ```
 
-### 4. Configurar variables de entorno
+### 4. Configurar las variables de entorno
 
-Crear un archivo `.env` tomando como base `.env.example`.
+Para trabajar de manera local se debe crear un archivo `.env` tomando como referencia el archivo `.env.example`.
 
 Ejemplo:
 
@@ -131,123 +151,127 @@ DB_NAME=bd_usuarios
 PORT=3000
 ```
 
-La contraseña real de MySQL no debe subirse a GitHub. El archivo `.env` está incluido en `.gitignore`.
+El archivo `.env` no se sube a GitHub porque puede contener información privada de la conexión.
 
-### 5. Ejecutar
+### 5. Ejecutar el proyecto
+
+Para iniciar la aplicación se utiliza:
 
 ```bash
 npm start
 ```
 
-Localmente se puede acceder mediante:
+Luego se puede ingresar desde el navegador utilizando:
 
 ```text
 http://localhost:3000
 ```
 
-Si el puerto `3000` está ocupado, se puede usar otro puerto configurando `PORT` en el archivo `.env`.
-
 ## Funcionalidades
 
 ### Perfil personal
 
-- Presentación del estudiante.
-- Sección Sobre mí.
-- Tecnologías utilizadas.
+La página principal muestra información relacionada con mi perfil, como:
+
+- Presentación personal.
+- Información sobre mí.
 - Información académica.
+- Tecnologías utilizadas.
 - Fotografía de perfil.
 
 ### CRUD de usuarios
 
-**CREATE:** registrar usuarios.  
-**READ:** listar usuarios.  
-**UPDATE:** editar usuarios.  
-**DELETE:** eliminar usuarios.
+El proyecto permite realizar las cuatro operaciones principales de un CRUD:
 
-# Procedimiento realizado
+**CREATE:** registrar nuevos usuarios.
 
-1. **Creación/configuración de la cuenta en Render:** Pendiente. No existe evidencia en el proyecto.
-2. **Creación del proyecto web:** Completado. El proyecto contiene una aplicación Node.js con Express y EJS.
-3. **Desarrollo del perfil personal:** Completado. La vista principal contiene datos personales, académicos, fotografía y tecnologías.
-4. **Creación de la base de datos `bd_usuarios`:** Pendiente de evidencia. El proyecto documenta la base requerida, pero no incluye capturas ni scripts de verificación de creación.
-5. **Creación de la tabla `usuarios`:** Pendiente de evidencia. La aplicación espera una tabla `usuarios` con `id`, `nombre`, `correo` y `edad`.
-6. **Configuración de la conexión entre Node.js y MySQL:** Completado. La conexión se realiza en `db.js` usando variables de entorno.
-7. **Desarrollo del CRUD:** Completado. Existen rutas para registrar, listar, editar y eliminar usuarios.
-8. **Pruebas locales:** Parcialmente completado. La aplicación responde localmente y la plantilla EJS renderiza correctamente. La prueba completa del CRUD depende de una base MySQL local configurada.
-9. **Creación del repositorio Git:** Pendiente hasta confirmar la inicialización local y sincronización con GitHub.
-10. **Publicación del código en GitHub:** Pendiente hasta realizar el `push`.
-11. **Preparación del proyecto para Render:** Parcialmente completado. El proyecto tiene `npm start`, variables de entorno y estructura compatible.
-12. **Despliegue en Render:** Pendiente. No se debe considerar completado hasta verificar la URL desplegada.
+**READ:** mostrar los usuarios registrados.
 
-# Evidencias
+**UPDATE:** modificar los datos de un usuario.
 
-Las siguientes capturas deben agregarse posteriormente como evidencia del laboratorio:
+**DELETE:** eliminar un usuario.
 
-- Cuenta/Dashboard de Render: Pendiente.
-- Creación de la base de datos: Pendiente.
-- Tabla usuarios: Pendiente.
-- Registros de prueba en MySQL: Pendiente.
-- Perfil funcionando: Pendiente.
-- CRUD funcionando: Pendiente.
-- Registro de usuario: Pendiente.
-- Edición de usuario: Pendiente.
-- Eliminación de usuario: Pendiente.
-- Repositorio GitHub: Pendiente.
-- Despliegue en Render: Pendiente.
-- Aplicación desplegada: Pendiente.
+Los datos ingresados desde la aplicación son manejados mediante Node.js y almacenados en MySQL.
 
-Actualmente no existe una carpeta de evidencias con capturas dentro del proyecto. Cuando se agreguen imágenes, se recomienda crear una carpeta como `docs/evidencias/` y referenciarlas desde este README.
+## Procedimiento realizado
+
+Para comenzar el laboratorio preparé el proyecto utilizando Node.js, Express y EJS. Luego organicé las carpetas necesarias para las vistas, estilos, imágenes y archivos JavaScript.
+
+Después desarrollé la página de mi perfil personal, agregando mi información académica, una sección sobre mí, las tecnologías utilizadas y mi fotografía.
+
+Una vez terminada esa parte, trabajé en el CRUD de usuarios. Implementé las opciones para registrar, visualizar, editar y eliminar usuarios.
+
+Para guardar esta información trabajé con MySQL. Primero realicé las pruebas de conexión y luego utilicé Aiven para tener la base de datos disponible en la nube.
+
+Desde el apartado **Overview de Aiven** revisé los datos de conexión del servicio MySQL, como el host, puerto, usuario, contraseña, nombre de la base de datos y configuración SSL.
+
+La conexión desde Node.js se configuró utilizando variables de entorno. Esto me permitió evitar colocar las credenciales directamente dentro del código.
+
+También preparé el proyecto con Git y lo subí a GitHub para tener el código almacenado en un repositorio remoto.
+
+Después conecté el repositorio de GitHub con Render y configuré las variables de entorno utilizando los datos de conexión proporcionados por Aiven.
+
+Finalmente realicé el despliegue del proyecto en Render y obtuve una dirección pública para poder ingresar a la aplicación desde Internet.
 
 ## Despliegue en Render
 
-Pasos necesarios para desplegar:
+Para publicar el proyecto utilicé Render. El repositorio de GitHub fue conectado directamente con el servicio web creado en la plataforma.
 
-1. Crear una cuenta o iniciar sesión en Render.
-2. Crear un nuevo Web Service.
-3. Conectar el repositorio de GitHub.
-4. Configurar el comando de instalación:
+Para instalar las dependencias se utilizó:
 
 ```bash
 npm install
 ```
 
-5. Configurar el comando de inicio:
+Y para iniciar la aplicación:
 
 ```bash
 npm start
 ```
 
-6. Agregar las variables de entorno necesarias en Render:
+En Render también agregué las variables de entorno necesarias para la conexión con MySQL:
 
 ```env
 DB_HOST=
-DB_PORT=3306
+DB_PORT=
 DB_USER=
 DB_PASSWORD=
-DB_NAME=bd_usuarios
-PORT=3000
+DB_NAME=
 ```
 
-7. Desplegar y verificar la URL pública.
 
-### Estado del despliegue
+Después de configurar el servicio y realizar el despliegue, la aplicación quedó disponible en:
 
-- Preparación del proyecto para Render: Parcialmente completado.
-- Despliegue en Render: Pendiente.
-- Verificación de la aplicación desplegada: Pendiente.
-- Verificación del CRUD desplegado: Pendiente.
+https://dsl-lab02.onrender.com
 
-### Limitación importante
+## Evidencias del laboratorio
 
-Una base MySQL local creada en MySQL Workbench no será accesible desde Render usando `localhost`. Para que el CRUD funcione en Render, se debe usar una base de datos MySQL accesible desde la nube o un servicio externo con credenciales configuradas en las variables de entorno de Render.
+Durante el desarrollo realicé pruebas tanto de manera local como en la nube.
+
+Entre las principales partes trabajadas se encuentran el perfil personal, el CRUD de usuarios, la conexión con MySQL, la configuración de Aiven, el uso de **Overview** para revisar los datos de conexión, la publicación del proyecto en GitHub y el despliegue final en Render.
 
 ## Seguridad
 
-No subir al repositorio:
+Para evitar publicar información sensible, el proyecto no incluye dentro del repositorio:
 
 - `.env`
 - Contraseñas
-- Credenciales de MySQL
+- Credenciales reales de MySQL
 - `node_modules/`
 
-Sí se incluye `.env.example` con valores de ejemplo y sin contraseñas reales.
+El archivo `.env.example` sirve solamente como referencia para conocer las variables necesarias para ejecutar el proyecto.
+
+## Repositorio
+
+El código fuente del laboratorio se encuentra almacenado en GitHub:
+
+https://github.com/Andy-CE17/Dsl-Lab02
+
+## Resultado final
+
+Como resultado del laboratorio pude desarrollar una aplicación web con mi perfil personal y un CRUD de usuarios, además de trabajar con una base de datos MySQL en la nube.
+
+También pude practicar el uso de GitHub para almacenar el proyecto, Aiven para trabajar con MySQL en la nube y Render para realizar el despliegue de la aplicación.
+
+**Aplicación:**  
+https://dsl-lab02.onrender.com
