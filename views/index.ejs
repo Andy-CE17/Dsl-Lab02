@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Personal | Andy Campos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <span class="brand-mark">AC</span>
+      <span>Andy Campos</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mi</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#usuarios">Usuarios</a>
+      <a href="#contacto">Contacto</a>
+      <a class="nav-cta" href="#sobre-mi">Mi perfil</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy reveal">
+        <p class="hero-kicker">HOLA, SOY</p>
+        <h1>Andy Luis Campos Escandón</h1>
+        <h2>Estudiante de Diseño y Desarrollo de Software</h2>
+        <p class="hero-meta">Tecsup | 5.º ciclo</p>
+        <p class="hero-text">Me enfoco en crear aplicaciones web funcionales, ordenadas y conectadas a bases de datos.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#sobre-mi">
+            <i class="fa-solid fa-user"></i>
+            Sobre mi
+          </a>
+          <a class="btn secondary" href="#usuarios">
+            <i class="fa-solid fa-users-gear"></i>
+            Gestión de Usuarios
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Contenedor para fotografia profesional">
+        <div class="visual-ring ring-one"></div>
+        <div class="visual-ring ring-two"></div>
+        <div class="profile-photo">
+          <div class="photo-glow"></div>
+          <img class="profile-img" src="/img/WhatsApp%20Image%202026-08-26%20at%209.14.16%20AM.jpeg" alt="Foto de Andy Luis Campos Escandón">
+        </div>
+        <span class="tech-bubble bubble-code">&lt;/&gt;</span>
+        <span class="tech-bubble bubble-node">Node.js</span>
+        <span class="tech-bubble bubble-mysql">MySQL</span>
+        <span class="tech-bubble bubble-cloud">Web</span>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section about-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><i class="fa-solid fa-address-card"></i> Sobre mí</p>
+        <h2>Perfil académico y enfoque profesional</h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-content reveal">
+          <p class="about-text">
+            Soy Andy Luis Campos Escandón, estudiante de Diseño y Desarrollo de Software en Tecsup,
+            actualmente en 5.º ciclo. Me interesa construir aplicaciones web claras, funcionales y
+            conectadas a bases de datos, cuidando tanto la parte visual como la organizacion del codigo.
+          </p>
+          <p class="about-text">
+            Mi objetivo es seguir fortaleciendo mis habilidades en desarrollo backend, frontend y
+            despliegue de aplicaciones, trabajando con proyectos practicos que resuelvan necesidades reales.
+          </p>
+
+          <div class="about-tags" aria-label="Intereses principales">
+            <span><i class="fa-solid fa-code"></i> Desarrollo Web</span>
+            <span><i class="fa-solid fa-database"></i> Bases de Datos</span>
+            <span><i class="fa-solid fa-server"></i> Backend</span>
+          </div>
+        </div>
+
+        <div class="profile-grid">
+          <article class="info-card reveal">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span>Carrera</span>
+            <strong>Diseño y Desarrollo de Software</strong>
+          </article>
+          <article class="info-card reveal">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Nivel actual</span>
+            <strong>5.º ciclo</strong>
+          </article>
+          <article class="info-card reveal">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>Institución</span>
+            <strong>Tecsup</strong>
+          </article>
+          <article class="info-card reveal">
+            <i class="fa-solid fa-bullseye"></i>
+            <span>Enfoque</span>
+            <strong>Aplicaciones web y CRUD</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="section tech-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><i class="fa-solid fa-screwdriver-wrench"></i> Tecnologías</p>
+        <h2>Herramientas que utilizo</h2>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-item reveal"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+        <div class="tech-item reveal"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+        <div class="tech-item reveal"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="tech-item reveal"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+        <div class="tech-item reveal"><i class="devicon-express-original"></i><span>Express</span></div>
+        <div class="tech-item reveal"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+        <div class="tech-item reveal"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="tech-item reveal"><i class="devicon-github-original"></i><span>GitHub</span></div>
+        <div class="tech-item reveal"><i class="devicon-render-plain colored"></i><span>Render</span></div>
+      </div>
+    </section>
+
+    <section class="section project-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><i class="fa-solid fa-diagram-project"></i> Proyecto personal</p>
+        <h2>Aplicación web con gestión de usuarios</h2>
+        <p class="section-copy">Este sitio muestra mi perfil personal y una funcionalidad CRUD conectada a una base de datos.</p>
+      </div>
+
+      <div class="architecture reveal">
+        <div class="arch-step">
+          <i class="fa-solid fa-window-maximize"></i>
+          <span>HTML / CSS / JavaScript</span>
+        </div>
+        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="arch-step">
+          <i class="fa-solid fa-gears"></i>
+          <span>Node.js + Express</span>
+        </div>
+        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="arch-step">
+          <i class="fa-solid fa-database"></i>
+          <span>MySQL</span>
+        </div>
+        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="arch-step">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span>Render</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="usuarios" class="section users-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><i class="fa-solid fa-users-gear"></i> CRUD</p>
+        <h2>Gestión de Usuarios</h2>
+        <p class="section-copy">Registra, edita y elimina usuarios de forma sencilla.</p>
+      </div>
+
+      <% if (mensaje) { %>
+        <div class="alert success reveal" data-auto-dismiss><i class="fa-solid fa-circle-check"></i><span><%= mensaje %></span></div>
+      <% } %>
+
+      <% if (error) { %>
+        <div class="alert error reveal" data-auto-dismiss><i class="fa-solid fa-triangle-exclamation"></i><span><%= error %></span></div>
+      <% } %>
+
+      <div class="crud-layout">
+        <form
+          id="userForm"
+          class="user-form reveal"
+          action="<%= editUser ? `/usuarios/${editUser.id}/actualizar` : '/usuarios' %>"
+          method="POST"
+          novalidate
+        >
+          <div class="form-heading">
+            <i class="fa-solid <%= editUser ? 'fa-user-pen' : 'fa-user-plus' %>"></i>
+            <div>
+              <h3><%= editUser ? `Editar usuario #${editUser.id}` : 'Registrar usuario' %></h3>
+              <p><%= editUser ? 'Actualiza los datos seleccionados.' : 'Completa los datos principales.' %></p>
+            </div>
+          </div>
+
+          <label for="nombre">Nombre</label>
+          <div class="input-group">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="nombre" name="nombre" maxlength="100" placeholder="Ejemplo: María Pérez" value="<%= editUser ? editUser.nombre : '' %>" required>
+          </div>
+          <small class="field-error" data-error-for="nombre"></small>
+
+          <label for="correo">Correo</label>
+          <div class="input-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="correo" name="correo" maxlength="100" placeholder="correo@ejemplo.com" value="<%= editUser ? editUser.correo : '' %>" required>
+          </div>
+          <small class="field-error" data-error-for="correo"></small>
+
+          <label for="edad">Edad</label>
+          <div class="input-group">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="number" id="edad" name="edad" min="1" max="120" placeholder="Ejemplo: 22" value="<%= editUser && editUser.edad ? editUser.edad : '' %>">
+          </div>
+          <small class="field-error" data-error-for="edad"></small>
+
+          <button class="btn primary" type="submit">
+            <i class="fa-solid fa-floppy-disk"></i>
+            <%= editUser ? 'Guardar cambios' : 'Registrar usuario' %>
+          </button>
+          <% if (editUser) { %>
+            <a class="btn ghost" href="/#usuarios">Cancelar</a>
+          <% } %>
+        </form>
+
+        <div class="table-panel reveal">
+          <div class="table-header">
+            <div>
+              <h3>Lista de usuarios</h3>
+              <p><%= usuarios.length %> registro(s)</p>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Correo</th>
+                  <th>Edad</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if (usuarios.length === 0) { %>
+                  <tr>
+                    <td colspan="5" class="empty-state">
+                      <i class="fa-solid fa-inbox"></i>
+                      No hay usuarios registrados.
+                    </td>
+                  </tr>
+                <% } %>
+
+                <% usuarios.forEach((usuario) => { %>
+                  <tr>
+                    <td><span class="id-badge">#<%= usuario.id %></span></td>
+                    <td><%= usuario.nombre %></td>
+                    <td><%= usuario.correo %></td>
+                    <td><%= usuario.edad || 'Sin edad' %></td>
+                    <td class="actions">
+                      <a
+                        class="action-btn edit"
+                        href="/?editar=<%= usuario.id %>#usuarios"
+                      >
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Editar
+                      </a>
+                      <form action="/usuarios/<%= usuario.id %>/eliminar" method="POST" class="delete-form">
+                        <button class="action-btn delete" type="submit">
+                          <i class="fa-solid fa-trash"></i>
+                          Eliminar
+                        </button>
+                      </form>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="footer">
+    <div>
+      <strong>Andy Luis Campos Escandón</strong>
+      <p>Diseño y Desarrollo de Software</p>
+      <p>Tecsup | 5.º ciclo</p>
+    </div>
+    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "perfil-crud-render",
+  "version": "1.0.0",
+  "description": "Aplicacion web con perfil profesional y CRUD de usuarios usando Node.js, Express, EJS y MySQL.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "ejs",
+    "mysql",
+    "crud"
+  ],
+  "author": "Andy Luis Campos Escandon",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  }
+}
